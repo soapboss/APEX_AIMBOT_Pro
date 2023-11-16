@@ -74,17 +74,17 @@ pip install -r requirements.txt        #程序自动会一个个的安装，如�
 
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 
-# 4.安装TensorRT。按照Nvidia 的安装说明进行操作。
+# 4.安装TensorRT。
 
-- 转到TensorRT 下载站点。
+- 转到TensorRT 下载站点。 [TensorRT download site](https://developer.nvidia.com/nvidia-tensorrt-8x-download).
 - 下载TensorRT 8.5 GA for Windows 10 and CUDA 11.0, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7 and 11.8 ZIP Package.
 - TensorRT-8.5.2.2从 中解压文件夹TensorRT-8.5.2.2.Windows10.x86_64.cuda-11.8.cudnn8.6.zip。
 - 添加<your install path>\TensorRT-8.5.2.2\lib到 PATH 环境变量中。
 - 转到文件夹<your install path>\TensorRT-8.5.2.2\python
 - 在命令窗口中输入
-conda activate yolov8 # activate dedicated environment
+conda activate yolov8      # activate dedicated environment
 
-pip install tensorrt-8.5.2.2-cp310-none-win_amd64.whl # install tensorrt package to python
+pip install tensorrt-8.5.2.2-cp310-none-win_amd64.whl    # install tensorrt package to python
 
 # 5.安装 python 要求。
 
