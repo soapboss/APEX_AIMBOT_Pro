@@ -32,12 +32,16 @@ The system automatically saves screenshots when a target is locked or an anomaly
 By annotating images using the current models, the speed of data annotation is significantly increased, further boosting the efficiency of model training.
 
 # Environment
-My envrionment uses python3.7
+My envrionment uses python3.7.8              #3.7.8
 ```
-conda create -n apex python=3.7
+conda create -n apex python=3.7            #先下载anaconda，然后添加环境变量到电脑中
 conda activate apex
-pip install pipwin
-pipwin install pycuda
+pip install pipwin                         
+############
+（set http_proxy=http://127.0.0.1:10809     #加入代理 填写自己的代理设置
+set https_proxy=http://127.0.0.1:10809
+pipwin install pycuda）
+##################
 pip install -r requirements.txt
 ```
 Install cuda11.8 with tensorrt following the [NVIDIA official instructions](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html)
