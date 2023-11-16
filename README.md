@@ -45,7 +45,8 @@ pipwin install pycuda）
 pip install -r requirements.txt        #程序自动会一个个的安装，如果出错需要先解决错误再进行后续的安装
 ```
 1.安装CUDA。（也可以按照官方说明操作CUDA official website：）。Install cuda11.8 with tensorrt following the [NVIDIA official instructions](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html)
-2.安装cuDNN。
+
+2.安装cuDNN:
 注册NVIDIA developer program.
 转到 cuDNN 下载站点：cuDNN download archive。
 单击Download cuDNN v8.5.0 (August 8th, 2022), for CUDA 11.x。
