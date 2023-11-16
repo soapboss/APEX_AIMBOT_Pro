@@ -34,9 +34,12 @@ By annotating images using the current models, the speed of data annotation is s
 
 版本对齐
 
-CUDA	CUDNN	张量RT	火炬
+CUDA	cuDNN	TensorRT	PyTorch
+
 11.7.0	8.5.0	8.5.2.2	2.0.0
+
 11.8.0	8.6.0	8.5.3.1	2.0.0
+
 ...	...	...	...
 
 # Environment
