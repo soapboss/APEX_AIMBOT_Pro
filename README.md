@@ -61,3 +61,5 @@ You can get the customized settings in `configs/apex.yaml`, set your suitable `s
 python utils/anno_imgs.py --data_dir your_dataset_dir --engine_path your_trt_engine_path
 ```
 
+#要点1：将C:\Program Files\NVIDIA Corporation\Nsight Systems 2022.4.2\host-windows-x64\zlib.dll
+我将其复制并重命名为：C:\Program Files\NVIDIA GPUComputing Toolkit\CUDA\v11.8\bin\zlibwapi.dll
