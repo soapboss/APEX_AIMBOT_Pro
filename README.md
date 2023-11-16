@@ -47,7 +47,7 @@ The following method has being tested and successed under `Windows 10 Pro Versio
 My envrionment uses python3.7.8              #3.7.8
 ```
 conda create -n apex python=3.7            #先下载anaconda，然后添加环境变量到电脑中
-conda activate apex
+conda activate apex       # (或者是C:\ProgramData\anaconda3\Scripts\activate.bat apex)
 pip install pipwin                         
 ############
 （set http_proxy=http://127.0.0.1:10809     #加入代理 填写自己的代理设置
@@ -71,9 +71,9 @@ pip install -r requirements.txt        #程序自动会一个个的安装，如�
 #############################
 
 # 3.安装PyTorch。
-
+```
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
-
+```
 # 4.安装TensorRT。
 
 - 转到TensorRT 下载站点。 [TensorRT download site](https://developer.nvidia.com/nvidia-tensorrt-8x-download).
@@ -82,14 +82,15 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvi
 - 添加<your install path>\TensorRT-8.5.2.2\lib到 PATH 环境变量中。
 - 转到文件夹<your install path>\TensorRT-8.5.2.2\python
 - 在命令窗口中输入
+```
 conda activate yolov8      # activate dedicated environment
 
 pip install tensorrt-8.5.2.2-cp310-none-win_amd64.whl    # install tensorrt package to python
-
+```
 # 5.安装 python 要求。
-
+```
 pip install -r requirements.txt   （若出现错误则先解决错误，再重复运行此代码）
-
+```
 # 6.#要点：
 6.1zlibwapi.dll缺失
 
