@@ -42,7 +42,7 @@ pip install pipwin
 set https_proxy=http://127.0.0.1:10809
 pipwin install pycuda）
 ##################
-pip install -r requirements.txt
+pip install -r requirements.txt        #程序自动会一个个的安装，如果出错需要先解决错误再进行后续的安装
 ```
 Install cuda11.8 with tensorrt following the [NVIDIA official instructions](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html)
 
