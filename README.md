@@ -44,8 +44,15 @@ pipwin install pycuda）
 ##################
 pip install -r requirements.txt        #程序自动会一个个的安装，如果出错需要先解决错误再进行后续的安装
 ```
-Install cuda11.8 with tensorrt following the [NVIDIA official instructions](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html)
-
+1.安装CUDA。（也可以按照官方说明操作CUDA official website：）。Install cuda11.8 with tensorrt following the [NVIDIA official instructions](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html)
+2.安装cuDNN。
+注册NVIDIA developer program.
+转到 cuDNN 下载站点：cuDNN download archive。
+单击Download cuDNN v8.5.0 (August 8th, 2022), for CUDA 11.x。
+下载Local Installer for Windows (Zip).
+解压缩cudnn-windows-x86_64-8.5.0.96_cuda11-archive.zip。
+复制所有三个文件夹 ( bin,, ) 并将它们粘贴到include安装目录中。（注意、、文件夹已存在于 CUDA 文件夹中。）。libCUDAC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7binincludelib
+#############################
 # Run 
 Running for apex (default hold left/right button to auto aim, side button(x2) to auto aim and shoot, side button(x1) to enable and disable the AI:
 
