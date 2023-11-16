@@ -1,10 +1,6 @@
 # Introduction
 This is a YOLOV7 based APEX Aimbot
-![apex](sample/apex.jpg)
-`Note: This is an educational purposes only software, do not use it for any commercial or illegal purposes, we will not be responsible for any unauthorized usage of this software` 
 
-## If you like it, please give me a star, thanks!
-[![Stargazers over time](https://starchart.cc/NTUYWANG103/APEX_AIMBOT.svg)](https://starchart.cc/NTUYWANG103/APEX_AIMBOT)
 
 # Features
 - Enemy and Friend Differentiation:
@@ -32,15 +28,20 @@ The system automatically saves screenshots when a target is locked or an anomaly
 By annotating images using the current models, the speed of data annotation is significantly increased, further boosting the efficiency of model training.
 
 
-版本对齐
 
-CUDA	cuDNN	TensorRT	PyTorch
 
-11.7.0	  8.5.0	  8.5.2.2  	2.0.0
+### 1.2. Environment set up in Windows10 & Windows11     版本对齐
 
-11.8.0	  8.6.0  	8.5.3.1	  2.0.0
+The following method has being tested and successed under `Windows 10 Pro Version 21H2/22H2`, `Windows11 Pro Version 22H2` and `Windows11 Pro Insider View Build 25346`. Technically, it works under all latest `Windows OS` builds.
+- Version-align
 
-...	  ...	  ...	  ...
+    |  CUDA   |  cuDNN   | TensorRT | PyTorch  |
+    | :-----: | :------: | :------: | :------: |
+    | 11.7.0  | 8.5.0    |  8.5.2.2 | 2.0.0    |
+    | 11.8.0  | 8.6.0    |  8.5.3.1 | 2.0.0    |
+    | ...    | ...   |  ... | ...    |
+    
+    We will be using the first row as our package manifests.
 
 # Environment
 My envrionment uses python3.7.8              #3.7.8
@@ -61,8 +62,8 @@ pip install -r requirements.txt        #程序自动会一个个的安装，如�
 
 # 2.安装cuDNN:
 
-注册NVIDIA developer program.
-转到 cuDNN 下载站点：cuDNN download archive。
+注册NVIDIA developer program. [`NVIDIA developer program`](https://developer.nvidia.com/login).
+转到 cuDNN 下载站点：cuDNN download archive。[`cuDNN download archive`](https://developer.nvidia.com/rdp/cudnn-archive).
 单击Download cuDNN v8.6.0 (August 8th, 2022), for CUDA 11.x。
 下载Local Installer for Windows (Zip).
 解压缩cudnn-windows-x86_64-8.5.0.96_cuda11-archive.zip。
@@ -86,20 +87,73 @@ pip install tensorrt-8.5.2.2-cp310-none-win_amd64.whl # install tensorrt package
 
 # 5.安装 python 要求。
 
-pip install -r requirement.txt
+pip install -r requirements.txt   （若出现错误则先解决错误，再重复运行此代码）
 
 # 6.#要点：
+6.1zlibwapi.dll缺失
 
 将C:\Program Files\NVIDIA Corporation\Nsight Systems 2022.4.2\host-windows-x64\zlib.dll
 我将其复制并重命名为：C:\Program Files\NVIDIA GPUComputing Toolkit\CUDA\v11.8\bin\zlibwapi.dll
 
-# Run 
+# 7.#Run 
 
 Running for apex (default hold left/right button to auto aim, side button(x2) to auto aim and shoot, side button(x1) to enable and disable the AI:
 
 ```
 python apex.py
 ```
+
+# 8.验证环境插件有效性
+<details>
+<summary> Verify installation and check versions.</summary>
+    
+- Verify installation of `CUDA`, `cuDNN`, `PyTorch` and `TensorRT`.  
+    
+    - Verify `CUDA`.
+        ```shell
+        nvcc -V
+        ```
+        If installment successed, you should see prompts like:
+        ```shell
+        nvcc: NVIDIA (R) Cuda compiler driver
+        Copyright (c) 2005-2022 NVIDIA Corporation
+        Built on Tue_May__3_19:00:59_Pacific_Daylight_Time_2022
+        Cuda compilation tools, release 11.7, V11.7.64
+        Build cuda_11.7.r11.7/compiler.31294372_0
+        ```
+     - Verify `cuDNN`.
+     
+        ```shell
+        python
+        import torch
+        print(torch.backends.cudnn.version())
+        ```
+        
+     - Verify `PyTorch`.
+      
+        ```shell
+        python
+        import torch
+        print(torch.__version__)
+        ```
+    
+    - Verify `TensorRT`.
+      
+        ```shell
+        pip show tensorrt
+        ```
+        If installment successed, you should see prompts like:
+        ```shell
+        Name: tensorrt
+        Version: 8.5.2.2
+        Summary: A high performance deep learning inference library
+        Home-page: https://developer.nvidia.com/tensorrt
+        Author: NVIDIA Corporation
+        ```    
+    
+    
+    
+</details>
 
 
 You can get the customized settings in `configs/apex.yaml`, set your suitable `smooth` hyperparameter
