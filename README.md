@@ -41,7 +41,7 @@ The following method has being tested and successed under `Windows 10 Pro Versio
     | 11.8.0  | 8.6.0    |  8.5.3.1 | 2.0.0    |
     | ...    | ...   |  ... | ...    |
     
-    We will be using the first row as our package manifests.
+    We will be using the second row as our package manifests.
 
 # Environment
 My envrionment uses python3.7.8              #3.7.8
