@@ -62,12 +62,12 @@ pip install -r requirements.txt        #程序自动会一个个的安装，如�
 
 # 2.安装cuDNN:
 
-注册NVIDIA developer program. [`NVIDIA developer program`](https://developer.nvidia.com/login).
-转到 cuDNN 下载站点：cuDNN download archive。[`cuDNN download archive`](https://developer.nvidia.com/rdp/cudnn-archive).
-单击Download cuDNN v8.6.0 (August 8th, 2022), for CUDA 11.x。
-下载Local Installer for Windows (Zip).
-解压缩cudnn-windows-x86_64-8.5.0.96_cuda11-archive.zip。
-复制所有三个文件夹 ( bin,, ) 并将它们粘贴到include安装目录中。（注意、、文件夹已存在于 CUDA 文件夹中。）。libCUDAC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7binincludelib
+- 注册NVIDIA developer program. [`NVIDIA developer program`](https://developer.nvidia.com/login).
+- 转到 cuDNN 下载站点：cuDNN download archive。[`cuDNN download archive`](https://developer.nvidia.com/rdp/cudnn-archive).
+- 单击Download cuDNN v8.6.0 (August 8th, 2022), for CUDA 11.x。
+- 下载Local Installer for Windows (Zip).
+- 解压缩cudnn-windows-x86_64-8.5.0.96_cuda11-archive.zip。
+- 复制所有三个文件夹 ( bin,, ) 并将它们粘贴到include安装目录中。（注意、、文件夹已存在于 CUDA 文件夹中。）。libCUDAC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7binincludelib
 #############################
 
 # 3.安装PyTorch。
@@ -76,13 +76,14 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvi
 
 # 4.安装TensorRT。按照Nvidia 的安装说明进行操作。
 
-转到TensorRT 下载站点。
-下载TensorRT 8.5 GA for Windows 10 and CUDA 11.0, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7 and 11.8 ZIP Package.
-TensorRT-8.5.2.2从 中解压文件夹TensorRT-8.5.2.2.Windows10.x86_64.cuda-11.8.cudnn8.6.zip。
-添加<your install path>\TensorRT-8.5.2.2\lib到 PATH 环境变量中。
-转到文件夹<your install path>\TensorRT-8.5.2.2\python
-在命令窗口中输入
+- 转到TensorRT 下载站点。
+- 下载TensorRT 8.5 GA for Windows 10 and CUDA 11.0, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7 and 11.8 ZIP Package.
+- TensorRT-8.5.2.2从 中解压文件夹TensorRT-8.5.2.2.Windows10.x86_64.cuda-11.8.cudnn8.6.zip。
+- 添加<your install path>\TensorRT-8.5.2.2\lib到 PATH 环境变量中。
+- 转到文件夹<your install path>\TensorRT-8.5.2.2\python
+- 在命令窗口中输入
 conda activate yolov8 # activate dedicated environment
+
 pip install tensorrt-8.5.2.2-cp310-none-win_amd64.whl # install tensorrt package to python
 
 # 5.安装 python 要求。
