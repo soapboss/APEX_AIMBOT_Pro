@@ -58,7 +58,7 @@ pip install -r requirements.txt        #程序自动会一个个的安装，如�
 ```
 # 1.安装CUDA。
 
-（也可以按照官方说明操作CUDA official website：）。Install cuda11.8 with tensorrt following the [NVIDIA official instructions](https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html)
+（也可以按照官方说明操作CUDA official website：）。Install cuda11.8 with tensorrt following the [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit)
 
 # 2.安装cuDNN:
 
@@ -67,26 +67,22 @@ pip install -r requirements.txt        #程序自动会一个个的安装，如�
 - 单击Download cuDNN v8.6.0 (August 8th, 2022), for CUDA 11.x。
 - 下载Local Installer for Windows (Zip).
 - 解压缩cudnn-windows-x86_64-8.5.0.96_cuda11-archive.zip。
-- 复制所有三个文件夹 ( bin,, ) 并将它们粘贴到include安装目录中。（注意、、文件夹已存在于 CUDA 文件夹中。）。libCUDAC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7binincludelib
+- 复制所有三个文件夹 ( bin,, ) 并将它们粘贴到include安装目录中。（注意、、文件夹已存在于 CUDA 文件夹中。）。libCUDAC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.7binincludelib  Install cuda11.8 with tensorrt following the [NVIDIA CUDA Toolkit](https://docs.nvidia.com/deeplearning/cudnn/latest/installation/windows.html)
 #############################
 
-# 3.安装PyTorch。
-```
-conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
-```
-# 4.安装TensorRT。
+# 3.安装conda:
+- 安装conda. [`NVIDIA developer program`](https://www.anaconda.com/download/).
+- conda create -n apex python=3.7 -y
+- conda activate apex
 
-- 转到TensorRT 下载站点。 [TensorRT download site](https://developer.nvidia.com/nvidia-tensorrt-8x-download).
-- 下载TensorRT 8.5 GA for Windows 10 and CUDA 11.0, 11.1, 11.2, 11.3, 11.4, 11.5, 11.6, 11.7 and 11.8 ZIP Package.
-- TensorRT-8.5.2.2从 中解压文件夹TensorRT-8.5.2.2.Windows10.x86_64.cuda-11.8.cudnn8.6.zip。
-- 添加<your install path>\TensorRT-8.5.2.2\lib到 PATH 环境变量中。
-- 转到文件夹<your install path>\TensorRT-8.5.2.2\python
-- 在命令窗口中输入
-```
-conda activate yolov8      # activate dedicated environment
 
-pip install tensorrt-8.5.2.2-cp310-none-win_amd64.whl    # install tensorrt package to python
-```
+# 4.安装pycuda  
+- pip install pipwin
+- pipwin install pycuda
+- 若pip win 无法执行安装pycuda 则直接进行pip的编译
+
+
+
 # 5.安装 python 要求。
 ```
 pip install -r requirements.txt   （若出现错误则先解决错误，再重复运行此代码）
